@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Конверт с подарком</title>
+</head>
+<body>
+	<div class="section">
+		<div class="envelope">
+			<div class="envelope__top">
+				<img src="https://www.komus.ru/medias/sys_master/root/h43/h95/9420117245982.jpg" alt="">
+			</div>
+
+			<div class="paper">
+				Подарок
+			</div>
+			<div class="envelope__body">
+				<img src="https://i.ytimg.com/vi/E-LMQH3l60U/hqdefault.jpg" alt="">
+			</div>
+		</div>
+	</div>
+<style>
+	body{
+		margin: 0;
+		font-family: sans-serif;
+	}
+	.section{
+		background-color: #fab1a0;
+		height: 100vh;
+		display: -webkit-flex;
+		display: -moz-flex;
+		display: -ms-flex;
+		display: -o-flex;
+		display: flex;
+		-ms-align-items: center;
+		align-items: center;
+	}
+	.envelope{
+		position: relative;
+		width: 200px;
+		height: 110px;
+	}
+	.envelope__top{
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		-webkit-transition: 1s;
+		-o-transition: 1s;
+		transition: 1s;
+		-webkit-transform: translateY(-100%);
+		-ms-transform: translateY(-100%);
+		-o-transform: translateY(-100%);
+		transform: translateY(-100%);
+	}
+	.envelope__body{
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		width: 100%;
+	}
+	.paper{
+		background-color: #fff;
+		width: 100px;
+		height: 80px;
+		text-align: center;
+		position: absolute;
+		left: 50%;
+		left: -50px;
+		-webkit-transform: translate(-40px);
+		-ms-transform: translate(-40px);
+		-o-transform: translate(-40px);
+		transform: translate(-40px);
+		-webkit-transition: .2s;
+		-o-transition: .2s;
+		transition: .2s;
+	}
+
+	.envelope__top_close{
+		-webkit-transform: translateY(-100%) rotateX(180deg);
+		-ms-transform: translateY(-100%) rotateX(180deg);
+		-o-transform: translateY(-100%) rotateX(180deg);
+		transform: translateY(-100%) rotateX(180deg);
+	}
+</style>
+<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="crossorigin="anonymous"></script>
+  <script>
+  	$('envelope').on('click', function(e){
+  		$('.envelope__top').toggleClass('envelope__top_close');
+  	})
+  </script>
+</body>
+</html>

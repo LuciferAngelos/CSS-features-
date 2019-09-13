@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<div class="section">
+		<div class="menu-block">
+			<nav class="menu-nav">
+				<a class="menu-nav-link" href="#">Home</a>
+				<a class="menu-nav-link" href="#">Portfolio</a>
+				<a class="menu-nav-link" href="#">About</a>
+				<a class="menu-nav-link" href="#">Contacts</a>
+			</nav>
+			<a href="#" class="menu-btn"><span></span></a>
+		</div>
+	</div>
+	<style>
+		body{
+			font-family: sans-serif;
+			margin: 0;
+		}
+		.section{
+			height: 100vh;
+			background-color: #7b1fa2;
+			display: -webkit-flex;
+			display: -moz-flex;
+			display: -ms-flex;
+			display: -o-flex;
+			display: flex;
+			justify-content: center;
+			-ms-align-items: center;
+			align-items: center;
+		}
+		.menu-btn{
+			display: block;
+			width: 50px;
+			height: 50px;
+			background-color: #fff;
+			border-radius: 50%;
+			position: relative;
+		}
+		.menu-btn span,
+		.menu-btn span::before,
+		.menu-btn span::after{
+			position: absolute;
+			top: 50%;
+			margin-top: -1px;
+			margin-left: -10px;
+			left: 50%;
+			width: 20px;
+			height: 2px;
+			background-color: #222;
+		}
+		.menu-btn span::before,
+		.menu-btn span::after{
+			content: '';
+			display: block;
+			transition: .5s;
+		}
+		.menu-btn span::before{
+			transform: translateY(-5px);
+		}
+		.menu-btn span::after{
+			transform: translateY(5px);
+		}
+		.menu-btn-active span::before{
+			-webkit-transform: rotate(-35deg);
+			-ms-transform: rotate(-35deg);
+			-o-transform: rotate(-35deg);
+			transform: rotate(-35deg);
+			transform-origin: left bottom;
+			width: 10px;
+		}
+		/*.menu-btn-active span{
+			height: 0;
+		}*/
+		.menu-btn-active span::after{
+			-webkit-transform: rotate(35deg);
+			-ms-transform: rotate(35deg);
+			-o-transform: rotate(35deg);
+			transform: rotate(35deg);
+			transform-origin: left top;
+			width: 10px;
+		}
+		.menu-block{
+			display: -webkit-flex;
+			display: -moz-flex;
+			display: -ms-flex;
+			display: -o-flex;
+			display: flex;
+			justify-content: center;
+			-ms-align-items: center;
+			align-items: center; 
+			overflow: hidden;
+			border-top-right-radius: 50px;
+			border-bottom-right-radius: 50px;
+		}
+		.menu-nav-link{
+			display: inline-block;
+			text-decoration: none;
+			color: #222;
+			margin-right: 20px;
+		}
+		.menu-nav{
+			background-color: #fff;
+			height: 50px;
+			line-height: 50px;
+			padding-left: 20px;
+			padding-right: 40px;
+			margin-right: -25px;
+			transition: 0.5s;
+			border-top-left-radius: 50px;
+			border-bottom-left-radius: 50px;
+			-webkit-transform-origin: right center;
+			-moz-transform-origin: right center;
+			-ms-transform-origin: right center;
+			-o-transform-origin: right center;
+			transform-origin: right center;
+			transform: translateX(100%);
+			opacity: 0;
+		}
+		.menu-nav_active{			/*точно так же можно заанимировать и ссылки. Вешаем классы на ссылки и передаем  джкверри*/
+			transform: translateX(0%);
+			opacity: 1;
+		}
+	</style>
+		<script
+  src="https://code.jquery.com/jquery-3.3.1.min.js"
+  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+  crossorigin="anonymous"></script>
+  <script>
+  	$('.menu-btn').on('click', function(e) {
+  		e.preventDefault;
+  		$(this).toggleClass('menu-btn-active');
+  		$('.menu-nav').toggleClass('menu-nav_active')
+  	});
+  </script>
+</body>
+</html>
