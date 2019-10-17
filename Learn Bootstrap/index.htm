@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Bootstrap4</title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<link rel="stylesheet" href="style.css">
+	
+</head>
+<body>
+	<h4>По умолчанию в бутстрапе сетка на 12 колонок:</h4>
+	<h4>extra small - < 576px - .col-количество колонок. Кроме того, .col- для автоматической разметки колонок на любом разрешении</h4>
+	<h4>small - >= 576px - .col-sm-количество колонок</h4>
+	<h4>medium - >= 768px - .col-md-количество колонок</h4>
+	<h4>large - >= 992px - .col-lg-количество колонок</h4>
+	<h4>extra-large - >= 1200px - .col-xl-количество колонок</h4>
+
+	<h4>Ширина полей - 30px (по 15px на каждой стороне)</h4>
+
+	<h1>1. Пример - Колонки одинаковой ширины</h1>
+	<div class="container">
+		<div class="row">
+			<h4>Колонки одинакового размера</h3></div>
+		<div class="row">
+			<div class="col color">1 из 2</div>
+			<div class="col color">2 из 2</div>
+		</div>
+		<div class="row">
+			<div class="col color">1 из 3</div>
+			<div class="col color">2 из 3</div>
+			<div class="col color">3 из 3</div>
+		</div>
+
+	</div>
+
+	<h1>2. Установка ширины одной колонки</h1>
+	<div class="container">
+		<div class="row">
+			<div class="col color">1 из 3 автоматически</div>
+			<div class="col-6 color">2 из 3 (строго 6 ячеек)</div>
+			<div class="col color">3 из 3 автоматически</div>
+		</div>
+	</div>
+
+	<h1>Автоматическая разметка.<br> 3. Контент переменной ширины</h1>
+	<div class="container">
+		<div class="row justify-content-sm-center">
+			<div class="col col-md-2 color">1 из 3. На среднем разрешении и выше строго 2 ячейки</div>
+			<div class="col-sm-auto color">контент переменной ширины</div>
+			<div class="col col-md-2 color">3 из 3. </div>
+		</div>
+		<div class="row justify-content-sm-center">
+			<div class="col color">1 из 3</div>
+			<div class="col-sm-auto color">контент переменной ширины</div>
+			<div class="col col-md-2 color">3 из 3.</div>
+		</div>
+	</div>
+	<h1>4. Мульти-ряд. Перенос на новую строку</h1>
+	<div class="container">
+		<div class="row">
+			<div class="col color">col</div>
+			<div class="col color">col</div>
+			<div class="w-100"></div>		<!-- перенос -->
+			<div class="col color">col</div>
+			<div class="col color">col</div>
+		</div>
+	</div>
+
+	<h1>Адаптивные классы. 5. Брейкпоинты</h1>
+	<div class="container">
+		<div class="row">
+			<div class="col color">col</div>
+			<div class="col color">col</div>
+			<div class="col color">col</div>
+			<div class="col color">col</div>
+		</div>
+		<div class="row">
+			<div class="col-6 color col-md-8">col-8 на всех разрешения, выше мд - устанавливается 8 и 4. На маленьких - кол-6</div>
+			<div class="col-6 color col-md-4">col-4 на всех разрешения, выше мд - устанавливается 8 и 4. На маленьких - кол-6</div>
+		</div>
+
+		<h1>6. Отображение на мобильных устройствах</h1>
+	</div>
+
+
+
+</body>
+</html>

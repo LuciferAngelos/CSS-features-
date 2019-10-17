@@ -1,0 +1,10 @@
+body{
+	padding-left: 20px;
+	padding-right: 20px;
+}
+.color{
+	background-color: #0f07ad;
+	color: #c9c8e0;
+	border: 1px solid #1ac2db;
+	box-shadow: inset 0px 0px 10px 1px rgba(34, 138, 153)
+}
