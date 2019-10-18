@@ -1,70 +1,84 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 	<meta charset="UTF-8">
 	<title>3d cards</title>
-	<script
-  src="https://code.jquery.com/jquery-3.3.1.min.js"
-  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
-  crossorigin="anonymous"></script>
+	<script src="https://code.jquery.com/jquery-3.3.1.min.js"
+		integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
 </head>
+
 <body>
 	<div class="section">
 		<div class="container">
-			<div class="cards"><img src="D:/WEB/Проект/rusablog/Img/3.jpg" alt=""></div>
-			<div class="cards"><img src="D:/WEB/Проект/rusablog/Img/3.jpg" alt=""></div>
-			<div class="cards"><img src="D:/WEB/Проект/rusablog/Img/3.jpg" alt=""></div>
-			<div class="cards"><img src="D:/WEB/Проект/rusablog/Img/3.jpg" alt=""></div>
-			<div class="cards"><img src="D:/WEB/Проект/rusablog/Img/3.jpg" alt=""></div>
-			<div class="cards"><img src="D:/WEB/Проект/rusablog/Img/3.jpg" alt=""></div>
+			<div class="cards"><img src="https://klike.net/uploads/posts/2018-06/1530090978_1.jpg" alt="">
+			</div>
+			<div class="cards"><img src="https://klike.net/uploads/posts/2018-06/1530090978_1.jpg" alt="">
+			</div>
+			<div class="cards"><img src="https://klike.net/uploads/posts/2018-06/1530090978_1.jpg" alt="">
+			</div>
+			<div class="cards"><img src="https://klike.net/uploads/posts/2018-06/1530090978_1.jpg" alt="">
+			</div>
+			<div class="cards"><img src="https://klike.net/uploads/posts/2018-06/1530090978_1.jpg" alt="">
+			</div>
+			<div class="cards"><img src="https://klike.net/uploads/posts/2018-06/1530090978_1.jpg" alt="">
+			</div>
 		</div>
 	</div>
 
-<style>
-	body{
-		margin: 0;
-		background-color: #3d385a;
-	}
-	.section{
-		perspective: 1000px;
-	}
-	.container{
-		width: 680px;
-		margin: auto;
-		display: -webkit-flex;
-		display: -moz-flex;
-		display: -ms-flex;
-		display: -o-flex;
-		display: flex;
-		flex-wrap: wrap;
-		justify-content: center;
-		-ms-align-items: center;
-		align-items: center;
-		height: 100vh;
-		transition: 1s;
-		transform: rotateX(55deg) rotateZ(-45deg) rotateY(10deg);
-		transform-style: preserve-3d;
-	}
-	img{
-		max-width: 100%;
-	}
-	.cards{
-		width: 250px;
-		margin: 10px;
-		transition: .3s;
-	}
-	.cards:hover{
-		cursor: pointer;
-		transform: translateZ(10px);
-	}
-	.container-origin{
-		transform: rotate(0);
-	}
-</style>
-<script>
-	$('.cards').on('click', function() {
-		$('.container').toggleClass('container-origin');
-	});
-</script>
+	<style>
+		body {
+			margin: 0;
+			background-color: #3d385a;
+		}
+
+		.section {
+			perspective: 1000px;
+		}
+
+		.container {
+			width: 680px;
+			margin: auto;
+			display: -webkit-flex;
+			display: -moz-flex;
+			display: -ms-flex;
+			display: -o-flex;
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: center;
+			-ms-align-items: center;
+			align-items: center;
+			height: 100vh;
+			transition: 1s;
+			transform: rotateX(55deg) rotateZ(-45deg) rotateY(10deg);
+			transform-style: preserve-3d;
+		}
+
+		img {
+			max-width: 100%;
+			max-height: 300px;
+		}
+
+		.cards {
+			width: 250px;
+			margin: 10px;
+			transition: .3s;
+		}
+
+		.cards:hover {
+			cursor: pointer;
+			transform: translateZ(10px);
+		}
+
+		.container-origin {
+			transform: rotate(0);
+		}
+	</style>
+	<script>
+		$('.cards').on('click', function () {
+			$('.container').toggleClass('container-origin');
+		});
+	</script>
 </body>
+
 </html>
