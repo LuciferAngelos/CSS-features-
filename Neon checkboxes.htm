@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Neon checkboxes with images</title>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css">
+</head>
+<body>
+	<div class="wrapper">
+		<ul class="buttons">
+			<li class="buttons__wrapper">
+				<label class="buttons__button">
+					<input type="checkbox" class="button__checker">
+					<i class="fas fa-clock"></i>
+					<div class="button__clicker"></div>
+				</label>
+			</li>
+			<li class="buttons__wrapper">
+				<label class="buttons__button">
+					<input type="checkbox" class="button__checker">
+					<i class="fas fa-volume-up"></i>
+					<div class="button__clicker"></div>
+				</label>
+			</li>
+			<li class="buttons__wrapper">
+				<label class="buttons__button">
+					<input type="checkbox" class="button__checker">
+					<i class="fas fa-wifi"></i>
+					<div class="button__clicker"></div>
+				</label>
+			</li>
+		</ul>
+	</div>
+	<style>
+		*{
+			padding: 0;
+			margin: 0;
+			-webkit-box-sizing: border-box;
+			-moz-box-sizing: border-box;
+			box-sizing: border-box;
+		}
+		.wrapper{
+			display: -webkit-flex;
+			display: -moz-flex;
+			display: -ms-flex;
+			display: -o-flex;
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: center;
+			-ms-align-items: center;
+			align-items: center;
+			height: 100vh;
+			background-color: #000;
+		}
+		.buttons{
+			width: 100%;
+			list-style-type: none;
+			display: -webkit-flex;
+			display: -moz-flex;
+			display: -ms-flex;
+			display: -o-flex;
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: center;
+		}
+		.buttons__wrapper{
+			width: 15%;
+			text-align: center;
+		}
+		.fas{
+			font-size: 50px;
+			color: #444;
+			transition: .3s color;
+		}
+		.button__clicker{
+			width: 90px;
+			height: 90px;
+			cursor: pointer;
+			background: linear-gradient(#000, #555);
+			margin: 15px auto 0 auto;
+			border-radius: 50%;
+			position: relative;
+			z-index: 1;
+		}
+		.button__clicker::before{
+			display: block;
+			content: '';
+			position: absolute;
+			top: 8px;
+			left: 8px;
+			bottom: 8px;
+			right: 8px;
+			background-color: #222;
+			border-radius: 50%;
+			border: 2px solid #151515;
+			z-index: 2;
+		}
+		.button__clicker::after{
+			display: block;
+			content: '';
+			width: 8px;
+			height: 8px;
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);		/*по оси х и у двигаем на 50% собственной ширины и собственной высоты*/
+			background-color: #111;
+			z-index: 3;
+			border-radius: 50%;
+			transition: .3s all;
+		}
+		.button__clicker:active{
+			background: linear-gradient(to top, #000, #555);
+		}
+		.button__checker{
+			display: none;
+		}
+		.button__checker:checked ~ .fas{		/*~ - этот символ означает "следующий элемент за этим"*/
+			color: #22b3f3;
+		}
+		.button__checker:checked ~ .button__clicker::after{
+			background-color: #22b3f3;
+			box-shadow: 0 0 10px #22b3f3, 
+						0 0 15px #22b3f3,
+						0 0 20px #22b3f3,
+						0 0 25px #22b3f3;
+		}
+	</style>
+</body>
+</html>
