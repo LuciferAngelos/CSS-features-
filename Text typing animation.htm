@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Text typing animation</title>
+</head>
+<body>
+	<div class="wrapper">
+		<h1 class="title">It`s a magic!</h1>
+	</div>
+
+<!-- Вся фишка заключается в том, что мы устанавливаем ширину блока width: 13ch, что является кол-вом символом, а затем анимации передаём уже в метод steps эти 13 символов. -->
+
+	<style>
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		body{
+			background-color: #042f36;
+		}
+		.wrapper{
+			display: -webkit-flex;
+			display: -moz-flex;
+			display: -ms-flex;
+			display: -o-flex;
+			display: flex;
+			justify-content: center;
+			margin-top: 20%;
+		}
+		.title{
+			width: 13ch;		/*ch - количество символов*/
+			color: white;
+			font-family: monospace;
+			white-space: nowrap;		/*ширина текста при сжатии*/
+			overflow: hidden;
+			border-right: 4px solid orange;
+			animation: flashing-border .75s step-end infinite,
+			printed-text 5s steps(13);
+		}
+
+		@keyframes flashing-border{
+			0%{
+				border-color: orange;
+			}
+			50%{
+				border-color: transparent;
+			}
+			100%{
+				border-color: orange;
+			}
+		}
+		@keyframes printed-text{
+			from{
+				width: 0;
+			}
+		}
+	</style>
+</body>
+</html>
