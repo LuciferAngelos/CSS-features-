@@ -1,0 +1,19 @@
+body{
+    font-family: 'Open Sans', sans-serif;
+    font-size: 16px;
+    color: #868585;
+    background-color: #fdfcfb;
+    font-weight: 400;
+}
+
+img{
+    width: 60px;
+    height: auto;
+}
+ul{
+    list-style-type: none;
+}
+i{
+    font-size: 20px;
+    margin: 0 10px;
+}
